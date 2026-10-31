@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="3.AddCategory.html">
+    <title>Admin Login</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f5;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 1000px;
+            margin: 100px auto 0;
+            padding: 35px 55px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+
+        .avatar {
+            text-align: center;
+            font-size: 75px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 15px 0 25px;
+            font-size: 30px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 8px;
+            color: #555;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: 1px solid #e5b51b;
+        }
+
+        small {
+            display: block;
+            margin-top: 8px;
+            color: #777;
+        }
+
+        button {
+            display: block;
+            margin: 35px auto 0;
+            padding: 14px 25px;
+            background: #e9b629;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #d5a21a;
+        }
+
+        #message {
+            text-align: center;
+            color: red;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .login-box {
+                margin-top: 40px;
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <div class="avatar">👨🏻‍💼</div>
+
+        <h2>Admin Login</h2>
+
+        <form id="loginForm">
+
+            <label for="username">User name</label>
+            <input type="email" id="username"placeholder="Enter email id.">
+
+            <label for="password">Password</label>
+            <input type="password"id="password" placeholder="Enter password.">
+
+            <small>Must be 8-20 characters long.</small>
+
+            <button onclick="submitdata()">Login</button>
+
+            <p id="message"></p>
+
+        </form>
+
+    </div>
+
+    <script>
+        var userdata=JSON.parse(localStorage.getItem('userdata'))||[]
+       function submitdata(){
+            userdata.splice(i,1);
+            localStorage.setItem('userdata',JSON.stringify(userdata));
+           logindata()
+        }
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Category</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .category-box {
+            max-width: 1000px;
+            margin: 30px auto;
+            border: 2px solid #222;
+            background: white;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 22px;
+            background: #e9b629;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 23px;
+        }
+
+        .close-btn {
+            background: transparent;
+            border: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .table-container {
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 650px;
+        }
+
+        thead {
+            background: #e9b629;
+        }
+
+        th, td {
+            padding: 17px 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            color: #222;
+        }
+
+        tbody tr:hover {
+            background: #faf7ef;
+        }
+
+        .delete-btn {
+            padding: 12px 18px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .delete-btn:hover {
+            background: #b02a37;
+        }
+
+        .message {
+            text-align: center;
+            color: #555;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .table-container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="category-box">
+
+        <div class="header">
+            <h2>Total Category</h2>
+            <button class="close-btn"
+                    onclick="closePage()"
+                    title="Close">&times;</button>
+        </div>
+
+        <div class="table-container">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category Id</th>
+                        <th>Category Name</th>
+                        <th>Category Description</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="categoryTable"></tbody>
+            </table>
+
+            <p id="emptyMessage" class="message"
+               style="display:none">
+                No categories available.
+            </p>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

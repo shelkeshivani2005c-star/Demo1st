@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Food Category</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .modal {
+            background: white;
+            border: 2px solid #222;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .modal-header {
+            background: #e9b629;
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .close-x {
+            border: none;
+            background: transparent;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 25px;
+        }
+
+        input, textarea {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        textarea {
+            height: 300px;
+            resize: vertical;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        button {
+            padding: 14px 22px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .add-btn {
+            background: #e9b629;
+            color: #222;
+        }
+
+        .close-btn {
+            background: #343a40;
+            color: white;
+        }
+
+        .add-btn:hover {
+            background: #d4a21a;
+        }
+
+        .close-btn:hover {
+            background: #23272b;
+        }
+
+        .category-list {
+            margin-top: 35px;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="modal" id="categoryFormBox">
+
+            <div class="modal-header">
+                <h2>Fill category details.</h2>
+
+                <button class="close-x"
+                        type="button"
+                        onclick="closeForm()">
+                    &times;
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <form id="categoryForm">
+
+                    <input
+                        type="text"
+                        id="categoryTitle"
+                        placeholder="Enter Category Title here"
+                        required
+                    >
+
+                    <textarea
+                        id="categoryDescription"
+                        placeholder="Enter Category Description here"
+                        required
+                    ></textarea>
+
+                    <div class="buttons">
+                        <button type="submit" class="add-btn">
+                            Add Category
+                        </button>
+
+                        <button type="button"
+                                class="close-btn"
+                                onclick="closeForm()">
+                            Close
+                        </button>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
